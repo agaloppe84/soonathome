@@ -1,0 +1,49 @@
+
+
+
+  <%= form_with(model: post, local: true) do |form| %>
+    <% if post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+        <ul>
+        <% post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field form-group">
+      <%= form.label :title %>
+      <%= form.text_field :title, id: :post_title, class: "form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label :body %>
+      <%= form.text_area :body, id: :post_body, class: "form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label :author %>
+      <%= form.text_field :author, id: :post_author, class: "form-control" %>
+    </div>
+
+    <div class="field form-group">
+
+      <%= form.label "Catégorie" %>
+      <select name="post[category_id]" class="form-control">
+        <% Category.all.each do |cat| %>
+          <%= content_tag(:option, cat.name, value: cat.id) %>
+        <% end %>
+      </select>
+
+    </div>
+
+    <div class="actions flex">
+      <%= form.submit "Créer un article", class: "btn btn-secondary" %>
+      <%= link_to 'Retour', posts_path, class: "btn btn-danger" %>
+    </div>
+  <% end %>
+
+

@@ -1,0 +1,13 @@
+.banner {
+  height: 80vh;
+  display: flex;
+  background-image: url('https://picsum.photos/1600/1200?image=594');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  justify-content: center;
+  align-items: center;
+  &-content {
+    width: 300px;
+  }
+}

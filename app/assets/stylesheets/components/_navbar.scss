@@ -1,0 +1,26 @@
+.navbar-responsive {
+  display: flex;
+  height: 60px;
+  box-sizing: border-box;
+  padding-left: 40px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $my-gray;
+  &-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 40px;
+    height: 100%;
+    display: flex;
+  }
+  &-logo {
+    width: 30px;
+    fill: red;
+  }
+}
+
+
+.fixed-navbar {
+   background-color: $my-gray;
+}

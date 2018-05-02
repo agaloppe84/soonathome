@@ -1,0 +1,37 @@
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+
+.svg-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: white;
+}
+
+.svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 1;
+}
+
+.user-icon {
+  font-size: 22px;
+  cursor: pointer;
+}
