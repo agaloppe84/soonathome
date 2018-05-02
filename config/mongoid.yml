@@ -156,6 +156,8 @@ test:
           mode: :primary
         max_pool_size: 1
 production:
-  sessions:
+  clients:
     default:
-      uri: <%= ENV['MONGOLAB_URI'] %>
+      database: heroku_mhcsp91w
+      hosts:
+        - <%= ENV['MONGOLAB_URI'] %>
