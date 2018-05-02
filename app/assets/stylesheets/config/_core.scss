@@ -35,3 +35,22 @@ p, h1, h2, h3, h4, h5 {
   font-size: 22px;
   cursor: pointer;
 }
+
+.dashboard-item {
+  width: 25%;
+}
+
+.dashboard-item-lg {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.full-item {
+  border-bottom: 1px solid rgb(230,230,230);
+  padding-bottom: 15px;
+}
+
+.editions-icon {
+  color: $dark;
+}

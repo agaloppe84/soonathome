@@ -1,9 +1,12 @@
 .subheader {
-  background-color: $my-gray-light-2;
-  height: 60px;
+  color: white;
+  height: 50px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
+  justify-content: flex-start;
   box-sizing: border-box;
+}
+
+.sub-header-wrapper {
+  background-color: $danger;
 }

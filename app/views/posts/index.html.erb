@@ -1,49 +1,20 @@
-<div class="container mt-5">
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <h1 class="font-weight-bold text-dark">Articles</h1>
+  </div>
+  <div class="product-device box-shadow d-none d-md-block"></div>
+  <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+</div>
+
+
+
+<div class="container mt-5 mb-5">
   <div class="d-flex align-items-center">
     <h5 class="font-weight-bold text-dark">Articles</h5>
     <strong class="ml-2 mr-2"> > </strong>
     <h5 class="font-weight-light text-muted"><%= "#{@posts.size} items" %></h5>
-    <%= link_to 'Nouvel article', new_post_path, class: "btn btn-secondary btn-sm ml-2" %>
   </div>
 </div>
-
-
-
-
-<div class="container">
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th scope="col">Creation</th>
-        <th scope="col">title</th>
-        <th scope="col">body</th>
-        <th scope="col">actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @posts.each do |post| %>
-          <tr>
-            <td><%= l post.created_at %></td>
-            <td><%= post.title %></td>
-            <td><%= post.body %></td>
-            <td><%= link_to 'Show', post %>
-            <%= link_to 'Edit', edit_post_path(post) %>
-            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-
-
-
-
-
-
-
-  <%= link_to 'dashboard', dashboard_path %>
-</div>
-
 
 
 
@@ -70,7 +41,7 @@
 
 
 
-              <p class="card-text mb-3 mt-3 text-muted">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+              <p class="card-text mb-3 mt-3 text-muted"><%= post.body %></p>
 
               <div class="d-flex justify-content-between align-items-center" style="width: 100%;">
                 <%= link_to 'Lire la suite', post, class: "text-secondary font-weight-bold" %>
